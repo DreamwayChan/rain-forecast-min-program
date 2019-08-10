@@ -1,0 +1,13 @@
+
+<view class="map_container">
+  
+  <map
+id="myMap"
+style="width: 100%; height: 100%;"
+scale='16'
+subkey="U5PBZ-75OWJ-VF6FB-F2L6S-BDXET-PAFJL"
+polyline="{{polyline}}"
+markers="{{markers}}"
+></map>
+
+</view>

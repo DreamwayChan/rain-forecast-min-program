@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap" bindtap="maptrap"></map>
+</view>
+<view class="map_text">
+  <text class="h1">{{textData.name}}</text>
+  <text>概述：{{textData.description}}</text>
+  <text>气温：{{textData.tem}}</text>
+  <text>风向风速：{{textData.wind}}</text>
+  <text>降雨预测：{{textData.rain}}</text>
+</view>
