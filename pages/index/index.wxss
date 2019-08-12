@@ -2,7 +2,7 @@
 .map_container{
   position: absolute;
   top: 0;
-  bottom: 80px;
+  bottom: 170px;
   left: 0;
   right: 0;
 }
@@ -14,8 +14,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0px;
-  height: 170px;
+  bottom: 15px;
+  z-index:2000;
+  padding-bottom:15px;
   background: #fff;
   padding: 0 15px;
 }
