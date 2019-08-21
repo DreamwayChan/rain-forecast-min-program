@@ -12,7 +12,8 @@ Page({
     description: '',
     tem: '',
     wind: '',
-    rain: ''
+    rain: '',
+    freshmap: true
   },
   makertap: function (e) {
     // console.log(e);
@@ -40,10 +41,9 @@ Page({
         //   markers: markersData
         // });
         that.setData({
-          latitude: markersData[0].latitude
-        });
-        that.setData({
-          longitude: markersData[0].longitude
+          latitude: markersData[0].latitude,
+          longitude: markersData[0].longitude,
+          freshmap: true
         });
         that.showMarkerInfo(markersData, 0);
         that.getCaiyunData(markersData[0].name, markersData[0].desc, markersData[0].longitude, markersData[0].latitude);
@@ -141,5 +141,40 @@ Page({
     } else {
       return "北西北";
     }
+  },
+  gototf: function(e){
+    wx.navigateTo({
+      url: '../yuntu/yuntu',
+    });
+  },
+  pickmap:function(e){
+    var that = this;
+    wx.chooseLocation({
+    success: function (res) {
+      console.log(res);
+      var latitude = res.latitude
+      var longitude = res.longitude
+      var speed = res.longitude
+      var accuracy = res.accuracy
+      var markers_new = [];
+      markers_new.push({
+        latitude: latitude,
+        longitude: longitude,
+        width: 15,
+        height: 15
+      })
+      that.setData({
+        id:22,
+        latitude: latitude,
+        longitude: longitude,
+        markers: markers_new,
+        textData: {
+          name: res.name,
+          desc: res.address
+        }
+      });
+      that.getCaiyunData(res.name, res.address, res.longitude, res.latitude);
+    }
+  })
   }
 })

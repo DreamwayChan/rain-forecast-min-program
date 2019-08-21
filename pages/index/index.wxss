@@ -2,9 +2,10 @@
 .map_container{
   position: absolute;
   top: 0;
-  bottom: 170px;
+  bottom: 310px;
   left: 0;
   right: 0;
+  z-index:1000;
 }
 .map{
   width: 100%;
@@ -14,19 +15,45 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 15px;
+  bottom: 55px;
   z-index:2000;
-  padding-bottom:15px;
   background: #fff;
-  padding: 0 15px;
 }
 text{
   margin: 5px 0;
   display: block;
   font-size:15px;
+  z-index:2000;
 }
 .h1{
   margin: 15px 0;
   font-size:17px;
   font-weight: 800;
+}
+.h3{
+  margin: 15px 0;
+  font-size:13px;
+  font-weight: 800;
+}
+.buttons{
+  width:100vw;
+  display: flex;
+  position:absolute;
+  left:0px;
+  bottom:5px;
+}
+.setting{
+  width:calc(100vw - 30px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  height:3rem;
+  margin:2px 15px;
+  border-bottom: 1px solid #ddd;
+}
+.viewimg{
+  width:80rpx;
+  height:80rpx;
+  margin-right:10px;
 }
